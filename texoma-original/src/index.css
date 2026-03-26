@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;600;800;900&family=JetBrains+Mono:wght@400;700&display=swap&effect=none');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Bangers", system-ui, sans-serif;
+  --font-body: "Nunito", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-bg: #FDF2F2;
+  --color-primary: #EF4444;
+  --color-primary-light: #F87171;
+  --color-text: #4B5563;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-family: var(--font-display);
+  letter-spacing: 0.05em;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Funky Neo-Brutalist Styles */
+.text-stroke {
+  -webkit-text-stroke: 2px #111;
+}
+
+.text-stroke-sm {
+  -webkit-text-stroke: 1px #111;
+}
+
+.shadow-funky {
+  box-shadow: 8px 8px 0px 0px #111;
+}
+
+.shadow-funky-sm {
+  box-shadow: 4px 4px 0px 0px #111;
+}
+
+.shadow-funky-hover {
+  transition: all 0.2s ease;
+}
+
+.shadow-funky-hover:hover {
+  box-shadow: 4px 4px 0px 0px #111;
+  transform: translate(4px, 4px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: #FDF2F2;
+  border-left: 2px solid #111;
+}
+::-webkit-scrollbar-thumb {
+  background: #EF4444;
+  border: 2px solid #111;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FBBF24;
+}
+
+/* Ticker Animation */
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-ticker {
+  animation: ticker 30s linear infinite;
+}
