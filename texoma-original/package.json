@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "clean": "rm -rf dist",
-    "lint": "echo 'Skipping linting...'"
+    "lint": "echo skipping"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
